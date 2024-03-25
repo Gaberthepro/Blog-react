@@ -6,13 +6,12 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.css";
 import Navbar from "./components/navbar";
 
-
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-      <Navbar></Navbar>
+    <Navbar></Navbar>
     <App />
   </React.StrictMode>
 );

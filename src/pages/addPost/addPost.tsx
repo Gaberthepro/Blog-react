@@ -19,32 +19,30 @@ export function AddPost() {
 
   return (
     <Fragment>
-      <form>
-        <div className="input-group input-group-lg">
-          <input
-            type="text"
-            className="form-control"
-            aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-lg"
-            placeholder="Title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
-        </div>
-        <div className="form-floating">
-          <textarea
-            className="form-control"
-            id="floatingTextarea2"
-            style={{ height: "50vh" }}
-            value={body}
-            onChange={(e) => setBody(e.target.value)}
-          ></textarea>
-          <label htmlFor="floatingTextarea2">Tell your story...</label>
-        </div>
-        <button type="button" className="btn btn-primary" onClick={handlePost}>
-          Publish
-        </button>
-      </form>
+      <div className="input-group input-group-lg">
+        <input
+          type="text"
+          className="form-control"
+          aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-lg"
+          placeholder="Title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+      </div>
+      <div className="form-floating">
+        <textarea
+          className="form-control"
+          id="floatingTextarea2"
+          style={{ height: "50vh" }}
+          value={body}
+          onChange={(e) => setBody(e.target.value)}
+        ></textarea>
+        <label htmlFor="floatingTextarea2">Tell your story...</label>
+      </div>
+      <button type="button" className="btn btn-primary" onClick={handlePost}>
+        Publish
+      </button>
     </Fragment>
   );
 }
