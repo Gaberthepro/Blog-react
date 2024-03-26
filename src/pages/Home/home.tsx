@@ -2,8 +2,14 @@ import React, { Fragment, useState, useEffect } from "react";
 import logo from "./logo.svg";
 import axios from "axios";
 
+interface Post {
+  title: string;
+  body: string;
+  author: string;
+}
+
 function Home() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<Post[]>([]);
 
   useEffect(() => {
     axios
@@ -17,18 +23,19 @@ function Home() {
   }, []);
 
   return (
-      <div className="card" style={{ width: "18rem" }}>
-        <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <h6 className="card-subtitle mb-2 text-body-secondary">
-            Card subtitle
-          </h6>
-          <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
+    <div>
+      {data.map((item, index) => (
+        <div key={index} className="card" style={{ width: "18rem" }}>
+          <div className="card-body">
+            <h5 className="card-title">{item.title}</h5>
+            <h6 className="card-subtitle mb-2 text-muted">{item.author}</h6>
+            <p className="card-text">
+                {item.body}
+            </p>
+          </div>
         </div>
-      </div>
+      ))}
+    </div>
   );
 }
 
