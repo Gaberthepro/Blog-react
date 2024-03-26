@@ -30,8 +30,9 @@ function Home() {
             <h5 className="card-title">{item.title}</h5>
             <h6 className="card-subtitle mb-2 text-muted">{item.author}</h6>
             <p className="card-text">
-                {item.body}
+                {item.body.substring(0,250)+'...'}
             </p>
+            <a href="/addPost" className="card-link">More</a>
           </div>
         </div>
       ))}

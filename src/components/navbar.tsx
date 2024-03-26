@@ -1,42 +1,38 @@
 import React, { Fragment } from "react";
 import { BrowserRouter, Routes, Route, Link, Navigate } from "react-router-dom";
-import AddPost from "../pages/addPost/addPost"
+import AddPost from "../pages/addPost/addPost";
 import App from "../App";
 import Home from "../pages/Home/home";
 
 export function Navbar() {
   return (
-    <BrowserRouter>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
-          <Link className="navbar-brand" to="/">Blog</Link>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <Link className="nav-link" to="/addPost">
-                  Post
-                </Link>
-              </li>
-            </ul>
-          </div>
+    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <div className="container-fluid">
+        <a className="navbar-brand" href="/">
+          Blog
+        </a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <a className="nav-link" href="/addPost">
+                Post
+              </a>
+            </li>
+          </ul>
         </div>
-      </nav>
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/addPost" element={<AddPost />} />
-      </Routes>
-    </BrowserRouter>
+      </div>
+    </nav>
   );
 }
 
