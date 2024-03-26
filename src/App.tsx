@@ -6,6 +6,7 @@ import Navbar from "./components/navbar";
 import Home from "./pages/Home/home";
 import AddPost from "./pages/addPost/addPost";
 import Post from "./pages/Post/post";
+import Login from "./pages/Login/login";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/addPost" element={<AddPost />} />
           <Route path="/Post/:id" element={<Post />} />
+          <Route path="/Login" element={<Login />} />
         </Routes>
       </BrowserRouter>
       ;

@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import AddPost from "../pages/addPost/addPost";
 import App from "../App";
 import Home from "../pages/Home/home";
+import "./navbar.css";
 
 export function Navbar() {
   return (
@@ -26,6 +27,11 @@ export function Navbar() {
             <li className="nav-item">
               <a className="nav-link" href="/addPost">
                 Post
+              </a>
+            </li>
+            <li className="nav-item" id="left">
+              <a className="nav-link" href="/Login">
+                Login
               </a>
             </li>
           </ul>
