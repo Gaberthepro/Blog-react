@@ -2,7 +2,8 @@ import React, { Fragment, useState, useEffect } from "react";
 import logo from "./logo.svg";
 import axios from "axios";
 
-interface Post {
+export interface Post {
+  _id: string;
   title: string;
   body: string;
   author: string;
@@ -24,15 +25,15 @@ function Home() {
 
   return (
     <div>
-      {data.map((item, index) => (
-        <div key={index} className="card" style={{ width: "18rem" }}>
+      {data.map((item) => (
+        <div key={item._id} className="card" style={{ width: "18rem" }}>
           <div className="card-body">
             <h5 className="card-title">{item.title}</h5>
             <h6 className="card-subtitle mb-2 text-muted">{item.author}</h6>
-            <p className="card-text">
-                {item.body.substring(0,250)+'...'}
-            </p>
-            <a href="/addPost" className="card-link">More</a>
+            <p className="card-text">{item.body.substring(0, 250) + "..."}</p>
+            <a href={`/Post/${item._id}`} className="card-link">
+              More
+            </a>
           </div>
         </div>
       ))}

@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import { BrowserRouter, Routes, Route, Link, Navigate } from "react-router-dom";
 import AddPost from "../pages/addPost/addPost";
 import App from "../App";
 import Home from "../pages/Home/home";

@@ -1,11 +1,11 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import axios from "axios";
 import Navbar from "./components/navbar";
 import Home from "./pages/Home/home";
 import AddPost from "./pages/addPost/addPost";
+import Post from "./pages/Post/post";
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/addPost" element={<AddPost />} />
+          <Route path="/Post/:id" element={<Post />} />
         </Routes>
       </BrowserRouter>
       ;
