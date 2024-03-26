@@ -34,8 +34,6 @@ function Post() {
           <blockquote className="blockquote">
             <p>{data?.author}</p>
           </blockquote>
-        </div>
-        <div className="Contetn">
           <p>{data?.body}</p>
         </div>
       </div>

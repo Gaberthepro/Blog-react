@@ -1,9 +1,11 @@
 import React, { Fragment, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export function AddPost() {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
+  const navigate = useNavigate();
 
   const handlePost = () => {
     const postData = {
@@ -15,6 +17,7 @@ export function AddPost() {
       .post("http://localhost:5000/posts/", postData)
       .then((response) => console.log(response.data))
       .catch((error) => console.error("Error:", error));
+      navigate(-1);
   };
 
   return (
