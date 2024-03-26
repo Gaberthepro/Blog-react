@@ -2,16 +2,17 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
+import AddPost from "./pages/addPost/addPost";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.css";
 import Navbar from "./components/navbar";
+import { BrowserRouter, Routes, Route, Link, Navigate } from "react-router-dom";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <Navbar></Navbar>
     <App />
   </React.StrictMode>
 );
