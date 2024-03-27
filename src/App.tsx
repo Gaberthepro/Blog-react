@@ -7,6 +7,7 @@ import Home from "./pages/Home/home";
 import AddPost from "./pages/addPost/addPost";
 import Post from "./pages/Post/post";
 import Login from "./pages/Login/login";
+import Register from "./pages/Register/register";
 
 function App() {
   return (
@@ -18,9 +19,9 @@ function App() {
           <Route path="/addPost" element={<AddPost />} />
           <Route path="/Post/:id" element={<Post />} />
           <Route path="/Login" element={<Login />} />
+          <Route path="/Register" element={<Register />} />
         </Routes>
       </BrowserRouter>
-      ;
     </div>
   );
 }

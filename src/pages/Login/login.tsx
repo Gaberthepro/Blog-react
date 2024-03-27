@@ -24,6 +24,12 @@ function App() {
             id="exampleInputPassword1"
           />
         </div>
+        <p>
+          Not registered yet?{" "}
+          <a className="link-opacity-100" href="/register">
+            Create an account
+          </a>
+        </p>
         <button type="submit" className="btn btn-primary">
           Submit
         </button>

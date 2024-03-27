@@ -4,7 +4,7 @@ import Home from "../Home/home";
 import axios from "axios";
 import "./post.css";
 
-interface Post {
+interface post {
   _id: string;
   title: string;
   body: string;
@@ -13,7 +13,7 @@ interface Post {
 
 function Post() {
   const { id } = useParams();
-  const [data, setData] = useState<Post>();
+  const [data, setData] = useState<post>();
 
   useEffect(() => {
     axios
@@ -40,4 +40,5 @@ function Post() {
     </Fragment>
   );
 }
+
 export default Post;
